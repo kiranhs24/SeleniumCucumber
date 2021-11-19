@@ -18,9 +18,11 @@ import pages.Checkoboxes;
 import pages.Dropdown;
 import pages.MouseHover;
 import pages.RadioButtons;
+import pages.WindowHandles;
 
 public class BaseClass {
-
+	
+	public static String browserName;
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public static JavascriptExecutor je;
@@ -33,6 +35,7 @@ public class BaseClass {
 	public static Alerts alerts;
 	public static Dropdown dropdown;
 	public static MouseHover mouseHover;
+	public static WindowHandles windowHandles;
 
 	public static WebDriver initBrowser(String browserrType, String url) {
 
@@ -43,6 +46,7 @@ public class BaseClass {
 				WebDriverManager.chromedriver().setup();
 				
 				ChromeOptions chromeOptions = new ChromeOptions();
+
 				chromeOptions.addArguments("--headless");
 				chromeOptions.addArguments("--disable-gpu");
 				chromeOptions.addArguments("--disable-extensions");

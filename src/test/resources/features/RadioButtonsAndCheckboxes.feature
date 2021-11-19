@@ -1,4 +1,4 @@
-Feature: Selenium Web Automation
+Feature: Radio button and Checkboxes
 	
 	Scenario: Check for first radio button
 		Given User has opened the site

@@ -18,6 +18,7 @@ import pages.Checkoboxes;
 import pages.Dropdown;
 import pages.MouseHover;
 import pages.RadioButtons;
+import pages.WindowHandles;
 import utilities.Utilities;
 
 public class Hooks extends BaseClass{
@@ -30,11 +31,14 @@ public class Hooks extends BaseClass{
 		je = (JavascriptExecutor) driver;
 		PropertyConfigurator.configure(System.getProperty("user.dir") + "/log4j.properties");
 		scenarioName = scenario.getName().toString();
+		
 		radioButtons = PageFactory.initElements(driver, RadioButtons.class);
 		checkboxes = PageFactory.initElements(driver, Checkoboxes.class);
 		alerts = PageFactory.initElements(driver, Alerts.class);
 		dropdown = PageFactory.initElements(driver, Dropdown.class);
 		mouseHover = PageFactory.initElements(driver, MouseHover.class);
+		windowHandles = PageFactory.initElements(driver, WindowHandles.class);
+		
 		actions = new Actions(driver);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		

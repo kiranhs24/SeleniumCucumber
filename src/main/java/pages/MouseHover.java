@@ -19,7 +19,7 @@ public class MouseHover {
 	@FindBy(id = "mousehover") 
 	public WebElement mouseHoverElement;
 	
-	// IFrame can only be switched with the help of id, name
+	// IFrame can only be switched with the help of id, name and web-element
 	
 	@FindBy(name = "iframe-name")
 	public WebElement iframe;
